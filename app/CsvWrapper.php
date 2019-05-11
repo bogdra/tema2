@@ -2,26 +2,17 @@
 
 namespace Core;
 
-use Interfaces\PersistenceInterface;
+use App\Abstracts\Persistence;
 
-// we could have used an abstract class too
-class CsvWrapper implements PersistenceInterface
+//for interface version check branch master
+class CsvWrapper extends Persistence
 {
-    private $handler;
     private $array_collection;
 
     public function __construct()
     {
-        $this->handler = $this->load_file(CSV_FILE_PATH);
+        parent::__construct();
         $this->set_array_collection($this->handler);
-    }
-
-    public function load_file(string $file_path): string
-    {
-        if (!$handler = file_get_contents($file_path)) {
-            die('There was a problem retrieving the source file');
-        }
-        return $handler;
     }
 
     public function get_array_collection(): array
@@ -29,7 +20,7 @@ class CsvWrapper implements PersistenceInterface
         return $this->array_collection;
     }
 
-    public function set_array_collection(string $file_content): void
+    protected function set_array_collection(string $file_content): void
     {
         $lines = explode(PHP_EOL, $file_content);
         $keys_array = explode(',', array_shift($lines));
