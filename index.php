@@ -1,13 +1,11 @@
 <?php
+
 define('ROOT', __DIR__);
 
-require_once('core/config.php');
 require_once( 'core/autoload.php');
 
+use \App\User;
 use \App\Client;
 
-$user = new Client(2);
-echo $user->email;
-
-
-//var_dump($test->getArrayCollection());
+echo (new User(4))->get_user_details();
+echo (new Client(2))->get_client_details();

@@ -1,10 +1,12 @@
 <?php
+require_once('config.php');
 
 function autoload($className)
 {
     $classNameWithNamespaceArray = explode('\\', $className);
 
     $classFile = array_pop($classNameWithNamespaceArray) . '.php';
+
     check_and_include(ROOT . DS .'app'. DS. 'interfaces' . DS . $classFile);
     check_and_include(ROOT . DS . 'core' . DS . $classFile);
     check_and_include(ROOT . DS . 'app' . DS . $classFile);

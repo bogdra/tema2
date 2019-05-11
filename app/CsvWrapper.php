@@ -4,20 +4,17 @@ namespace Core;
 
 use Interfaces\PersistenceInterface;
 
-
+// we could have used an abstract class too
 class CsvWrapper implements PersistenceInterface
 {
     private $handler;
-    /** @var array $array_collection */
     private $array_collection;
-
 
     public function __construct()
     {
         $this->handler = $this->load_file(CSV_FILE_PATH);
         $this->set_array_collection($this->handler);
     }
-
 
     public function load_file(string $file_path): string
     {
@@ -45,7 +42,7 @@ class CsvWrapper implements PersistenceInterface
         $this->array_collection = $final_array;
     }
 
-    public function  get_array_by_id(int $id) :array
+    public function get_array_by_id(int $id): array
     {
         if (!array_key_exists($id, $this->array_collection)) {
             die('The specified element does not exists!');

@@ -6,7 +6,7 @@ class Client extends User
 {
     public $nume;
     public $prenume;
-    public $fullname;
+    public $full_name;
     public $oras;
     public $tara;
     public $full_address;
@@ -42,7 +42,7 @@ class Client extends User
                 <li>$this->password</li>
                 <li>$this->nume</li>
                 <li>$this->prenume</li>
-                <li>$this->fullname</li>
+                <li>$this->full_name</li>
                 <li>$this->oras</li>
                 <li>$this->tara</li>
                 <li>$this->full_address</li>
