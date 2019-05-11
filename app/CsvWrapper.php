@@ -4,7 +4,7 @@ namespace Core;
 
 use Interfaces\PersistenceInterface;
 
-// we could have used an abstract class too
+// for version with abstract class check branch feature/abstract
 class CsvWrapper implements PersistenceInterface
 {
     private $handler;

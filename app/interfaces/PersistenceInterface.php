@@ -10,6 +10,6 @@ interface PersistenceInterface
 
     public function get_array_collection(): array;
 
-    //public function get_array_by_id(int $id): array;
+    public function get_array_by_id(int $id): array;
 
 }
