@@ -1,0 +1,6 @@
+id,e-mail,username,password,nume,prenume,oras,tara
+1,1@1.com,test1,pass1,nume1,prenume1,Bucuresti,Romania
+2,2@2.com,test2,pass2,nume2,prenume2,Cluj,Romania
+3,3@3.com,test3,pass3,nume3,prenume3,Iasi,Romania
+4,4@4.com,test4,pass4,nume4,prenume4,Brasov,Romania
+5,5@5.com,test5,pass5,nume5,prenume5,Bucuresti,Romania
